@@ -23,6 +23,9 @@ const SideNavWrapper = styled.nav`
     text-align: right;
     padding-right: 32px;
   }
+  .icon-namearrow {
+    margin-left: 8px;
+  }
 `
 
 const SideNav = () => (

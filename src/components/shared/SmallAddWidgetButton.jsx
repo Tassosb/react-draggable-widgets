@@ -24,6 +24,7 @@ const SmallAddWidgetButtonWrapper = styled.div`
     height: 30px;
     background-color: #ffffff;
     border: solid 1px #bbbbbb;
+    border-right: none;
     display: flex;
     align-items: center;
     justify-content: center;

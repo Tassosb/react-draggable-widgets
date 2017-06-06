@@ -42,7 +42,10 @@ const DashboardButtons = ({dashboards, currentDashboard}) => {
         <select>
           <option>-Select a Dashboard-</option>
           {dashboards.map((d) => (
-            <option key={d.id}>{d.name}</option>
+            <option key={d.id}
+              selected={(d.id === currentDashboard.id)}>
+              {d.name}
+            </option>
           ))}
         </select>
       </div>

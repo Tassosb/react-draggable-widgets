@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import '../styles/reset.css';
 
-import Header from './Page/Header';
-import DataContainer from './Data/DataContainer';
+import Header from './navigation/Header';
+import DashboardNav from './dashboards/DashboardNav';
+import DashboardControl from './dashboards/DashboardControl';
+import WidgetDisplay from './widgets/WidgetDisplay';
 
 const AppWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  background-color: #f8f8f8;
+  width: 1300px;
+  main {
+    margin: 0 64px;
+    min-height: 800px;
+  }
 `;
 
 class App extends Component {
@@ -18,7 +21,11 @@ class App extends Component {
     return (
       <AppWrapper>
         <Header />
-        <DataContainer />
+        <DashboardNav />
+        <main>
+          <DashboardControl />
+          <WidgetDisplay />
+        </main>
       </AppWrapper>
     );
   }

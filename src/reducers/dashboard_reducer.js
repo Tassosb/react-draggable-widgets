@@ -4,7 +4,7 @@ import {
 } from '../actions/dashboard_actions';
 
 const initialState = {
-   byId: {1: {id: 1, name: "Foods"}},
+   byId: {1: {id: 1, name: "Income Groups"}},
    allIds: [1],
    current: 1
 }

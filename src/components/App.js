@@ -25,6 +25,10 @@ const AppWrapper = styled.section`
       text-align: left;
       color: #777777;
     }
+    span.underline {
+      text-decoration: underline;
+      font-family: HelveticaNeue;
+    }
     padding-bottom: 61px;
   }
 `;
@@ -40,7 +44,7 @@ class App extends Component {
           <DashboardControl />
           <WidgetDisplay />
           <footer>
-            <p>© 2017 FoodIQ  |  © Energy Metrics, LLC</p>
+            <p>© 2017 FoodIQ  |  © <span className='underline'>Energy Metrics</span>, <span className='underline'>LLC</span></p>
           </footer>
         </main>
       </AppWrapper>

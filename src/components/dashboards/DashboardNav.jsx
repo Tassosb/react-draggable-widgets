@@ -13,7 +13,6 @@ const DashboardNavWrapper = styled.nav`
   align-items: center;
 
   p {
-    width: 261px;
     height: 22px;
     font-family: HelveticaNeue;
     font-size: 20px;

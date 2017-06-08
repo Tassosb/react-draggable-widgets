@@ -9,15 +9,15 @@ const initialState = {
             id: 1,
             type: 'Table',
             width: 1,
-            title: 'Testing',
-            description: 'Hey this is a test'
+            title: 'Average Yearly Incomes',
+            description: 'Some data about money'
           },
           2: {
             id: 2,
             type: 'Table',
             width: 1,
-            title: 'Testing 22',
-            description: 'Hey this is a test 222'
+            title: 'Other Table About Money',
+            description: 'Most common salaries in some places'
           }
         },
   allIds: [1, 2]

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { selectAllDashboards } from '../../reducers/selectors';
 import SmallAddWidgetButton from '../shared/SmallAddWidgetButton';
+import dropdownArrow from '../../assets/icons/dropdown-arrow.svg';
 
 const DashboardButtonsWrapper = styled.section`
   display: flex;
@@ -17,9 +18,12 @@ const DashboardButtonsWrapper = styled.section`
   }
 
   .dashboard-switcher {
+    position:relative;
     margin-right: 22px;
     select {
       margin-top:7px;
+      -webkit-appearance: initial;
+      padding: 7px;
     }
     h3 {
       width: 116px;
@@ -30,6 +34,11 @@ const DashboardButtonsWrapper = styled.section`
       letter-spacing: -0.1px;
       text-align: left;
       color: #333333;
+    }
+    .dropdown-arrow {
+      position: absolute;
+      right: 12px;
+      top: 34px;
     }
   }
 `
@@ -48,6 +57,8 @@ const DashboardButtons = ({dashboards, currentDashboard}) => {
             </option>
           ))}
         </select>
+        <img src={dropdownArrow}
+          className="dropdown-arrow" alt='arrow'/>
       </div>
       <SmallAddWidgetButton />
     </DashboardButtonsWrapper>

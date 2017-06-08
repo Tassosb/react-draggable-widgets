@@ -6,6 +6,7 @@ import Header from './navigation/Header';
 import DashboardNav from './dashboards/DashboardNav';
 import DashboardControl from './dashboards/DashboardControl';
 import WidgetDisplay from './widgets/WidgetDisplay';
+import AddWidgetDropdown from './widgets/dropdown/AddWidgetDropdown';
 
 const AppWrapper = styled.section`
   background-color: #f8f8f8;
@@ -20,6 +21,7 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
+        <AddWidgetDropdown />
         <Header />
         <DashboardNav />
         <main>

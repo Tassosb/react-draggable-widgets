@@ -1,5 +1,7 @@
 # React-Redux Widgets App
 
+[Live](https://energy-metrics-react-challenge.herokuapp.com/)
+
 ## Implementation
 
 - react

@@ -15,6 +15,18 @@ const AppWrapper = styled.section`
     margin: 0 64px;
     min-height: 800px;
   }
+  footer {
+    border-top: 1px solid #dddddd;
+    padding-top: 15px;
+    p {
+      height: 13px;
+      font-family: HelveticaNeue;
+      font-size: 11px;
+      text-align: left;
+      color: #777777;
+    }
+    padding-bottom: 61px;
+  }
 `;
 
 class App extends Component {
@@ -27,6 +39,9 @@ class App extends Component {
         <main>
           <DashboardControl />
           <WidgetDisplay />
+          <footer>
+            <p>© 2017 FoodIQ  |  © Energy Metrics, LLC</p>
+          </footer>
         </main>
       </AppWrapper>
     );

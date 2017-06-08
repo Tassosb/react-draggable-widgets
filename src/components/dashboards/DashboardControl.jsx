@@ -9,7 +9,7 @@ import { updateDashboard } from '../../actions/dashboard_actions';
 
 const DashboardControlWrapper = styled.section`
   width: 100%;
-  height: 92px;
+  height: 78px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

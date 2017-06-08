@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { DragSource, DropTarget } from 'react-dnd';
+import ScrollArea from 'react-scrollbar';
+
+import ReactScrollbar from 'react-scrollbar-js';
 
 import iconMove from '../../assets/icons/icon-move.svg';
 import dataTable from '../../assets/data-table.png';
@@ -60,10 +63,13 @@ const WidgetItemWrapper = styled.li`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
-    img {
-      background-size: auto 100%;
-    }
+  }
+
+  .react-scrollbar-default .-reactjs-scrollbar-thumb {
+    width: 10px;
+    height: 10px
+    background-color: #c1c1c1;;
+    border-radius:5px;
   }
 `
 
@@ -107,6 +113,21 @@ const widgetTarget = {
   },
 };
 
+class WidgetItemContent extends React.Component {
+  render() {
+    const myScrollbar = {
+      width: '100%',
+      height: 300,
+    };
+
+    return (
+      <ReactScrollbar style={myScrollbar}>
+        <img src={dataTable} alt='data'/>
+      </ReactScrollbar>
+    );
+  }
+}
+
 const WidgetItem = ({widget, connectDropTarget, connectDragSource,
                      findCard, moveCard, isDragging, connectDragPreview}) => {
   const opacity = isDragging ? 0 : 1;
@@ -128,7 +149,7 @@ const WidgetItem = ({widget, connectDropTarget, connectDragSource,
           </section>
         </header>
         <section className='widget-content'>
-          <img src={dataTable} alt='data'/>
+          <WidgetItemContent />
         </section>
       </WidgetItemWrapper>
     </div>
